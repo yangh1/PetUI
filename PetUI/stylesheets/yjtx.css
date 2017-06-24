@@ -1,0 +1,45 @@
+body {
+	padding-top: 70px;
+}
+
+.headline h2{
+    display: inline-block;
+    margin-bottom: 0;
+}
+
+.headline a{
+    font-size: 13pt;
+    float:right;
+    margin-left: 10px;
+    margin-top: 23pt;
+    text-decoration: underline;
+}
+
+.news {
+     overflow:auto;
+}
+
+.news-list{
+    float: right;
+    width: 60%;
+}
+
+.news-container h2{
+    display: inline-block;
+}
+
+.news a{
+    color: red;
+}
+
+.news-list h2{
+    color: #0099ff;
+}
+
+.moreNews {
+    text-align: center;
+    display: block;
+    padding-bottom: 40px;
+    color: red;
+    font-size: 17pt; 
+}

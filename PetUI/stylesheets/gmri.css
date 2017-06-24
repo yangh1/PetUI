@@ -1,0 +1,76 @@
+.headline p{
+    font-size: 25pt;
+    display: inline-block;
+}
+
+.headline a{
+    font-size: 13pt;
+    float:right;
+    margin-left: 10pt;
+    margin-top: 10pt;
+    text-decoration: underline;
+}
+
+.search-container{
+    background: gray;
+    color: white;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.search-box input{
+    border-radius: 15px;
+}
+
+.search-box button{
+    border-radius: 15px;
+}
+
+.product img{
+    width:200px;
+    height:250px;
+}
+
+.products-container {
+    text-align: center;
+}
+
+.products {
+    height: 550px;
+    overflow: hidden;
+}
+
+.products-list{
+    padding-left: 0px;
+}
+
+.products li{
+    list-style-type: none;
+}
+
+.service{
+    padding:5px;
+    width:400px;
+    margin:auto;
+    position:relative;
+    overflow: hidden;
+}
+
+.service-img img{
+    width:150px;
+    height:120px;
+}
+
+.service-img {
+    float:left;
+}
+
+.service-content{
+    position:absolute;
+    right:50px;
+    top:30%;
+    margin-top:-25px;
+}

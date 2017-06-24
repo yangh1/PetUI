@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>MovieQuotes</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="./stylesheets/oppc.css">
+
+</head>
+
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+                <a class="navbar-brand" href="#">公司logo</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">产品简介1</a></li>
+                    <li><a href="#">产品简介2</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">咨询中心</a></li>
+                    <li><a href="#">常见问题解答</a></li>
+                    <li><a href="#">关于我们</a></li>
+                    <li><a href="#">联系我们</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-lock" aria-hidden="true"></a></span>
+                    </li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </div>
+
+    <div class="main container">
+        <div>
+            <h1>联系我们</h1>
+        </div>
+        <hr>
+        <div class="contact-container">
+            <div class="contact">
+                <p>xxxx公司</p>
+                <p>公司地址：江苏省常州市XXXXX</p>
+            </div>
+            <div id="allmap"></div>
+        </div>
+
+        <div class="form-container">
+            <hr>
+            <h4>How can you help us?</h4>
+            <div class="message-form">
+                <div class="left-form">
+                    <input type="text" class="name" placeholder="姓名">
+                    <input type="text" class="company" placeholder="公司">
+                    <input type="email" class="e-mail" placeholder="邮件">
+                    <input type="tel" class="phone" placeholder="电话">
+                </div>
+                <div class="right-form">
+                    <textarea class="message" rows="6" placeholder="留言"></textarea>
+                    <button type="button" class="send btn btn-success">发送</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        //百度地图API功能
+        function loadJScript() {
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.src = "http://api.map.baidu.com/api?v=2.0&ak=4K3m62l5UNgRSx6eVixlndCSlLmqXB2P&callback=init";
+            document.body.appendChild(script);
+        }
+        function init() {
+            var map = new BMap.Map("allmap");            // 创建Map实例
+            var point = new BMap.Point(116.417854,39.921988); // 创建点坐标
+            map.centerAndZoom(point, 15);
+            map.enableScrollWheelZoom();                 //启用滚轮放大缩小
+
+            var marker = new BMap.Marker(point);  // 创建标注
+            map.addOverlay(marker);              // 将标注添加到地图中
+            var opts = {
+                width: 200,     // 信息窗口宽度
+                height: 100,     // 信息窗口高度
+                title: "海底捞王府井店", // 信息窗口标题
+                enableMessage: true,//设置允许信息窗发送短息
+            }
+            var infoWindow = new BMap.InfoWindow("地址：北京市东城区王府井大街88号乐天银泰百货八层", opts);  // 创建信息窗口对象 
+            marker.addEventListener("click", function () {
+                map.openInfoWindow(infoWindow, point); //开启信息窗口
+            });
+
+        }
+        window.onload = loadJScript;  //异步加载地图
+    </script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Compiled and minified Bootstrap JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="./javascript/oppc.js"></script>
+</body>
+
+</html>

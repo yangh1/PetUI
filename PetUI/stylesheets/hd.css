@@ -1,0 +1,55 @@
+/*
+ * Start Bootstrap - Full Slider (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+/*body {
+    background-image: url("dog1.jpg");
+    background-repeat:  no-repeat;
+	background-attachment: fixed;
+	background-size: 100% 100%;
+	background-color: #999;
+}*/
+
+html,
+body {
+    height: 100%;
+}
+
+.carousel,
+.item {
+    height: 100%;
+}
+
+.active {
+    height: 100%;
+}
+
+.carousel-inner {
+    height: 100%;
+}
+
+/* Background images are set within the HTML using inline CSS, not here */
+
+.fill {
+    width: 100%;
+    height: 100%;
+    background-position-y: 50px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.content{
+    top: 70px;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+}
+
+.content a{
+    text-decoration: underline;
+    color: black;
+}

@@ -1,0 +1,50 @@
+.main{
+    padding-top: 70px;
+}
+
+.contact-container {
+    overflow: auto;
+}
+
+.contact{
+    float: left;
+}
+
+#allmap{
+    float: right;
+    width: 400px;
+    height: 200px;
+}
+
+.form-container input{
+    width: 96%;
+    display: block;
+    border-radius: 5px;
+    background-color: rgb(240, 240, 240);
+    margin-bottom: 4%;
+    border: 1px solid black;
+}
+
+.left-form {
+    width: 50%;
+    float: left;
+}
+
+.right-form {
+    width: 50%;
+    height: 100%;
+    float: right;
+}
+
+.message {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background-color: rgb(240, 240, 240);
+    border: 1px solid black;
+}
+
+.send {
+    float: right;
+}
+
